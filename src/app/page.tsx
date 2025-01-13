@@ -1,7 +1,7 @@
-import AIInsights from "@/features/ai-insights"
-    import SnipingBot from "@/features/sniping-bot"
-    import PortfolioManagement from "@/features/portfolio-management"
-    import CommunityFeatures from "@/features/community-features"
+import AIInsights from "@/app/features/ai-insights"
+import SnipingBot from "@/app/features/sniping-bot"
+import PortfolioManagement from "@/app/features/portfolio-management"
+import CommunityFeatures from "@/app/features/community-features"
 
     export default function DashboardPage() {
       return (

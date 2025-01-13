@@ -4,9 +4,9 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
     import { Button } from "@/components/ui/button"
     import { Input } from "@/components/ui/input"
     import { Label } from "@/components/ui/label"
-    import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+    import { Select, SelectOption } from "@/components/ui/select"
 
-    export function CommunityFeatures() {
+    export default function CommunityFeatures() {
       const projects = [
         {
           name: "Project Alpha",
@@ -99,16 +99,11 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
                 <div className="space-y-2">
                   <Label>Select Project</Label>
                   <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select project" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {projects.map((project) => (
-                        <SelectItem key={project.name} value={project.name}>
-                          {project.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
+                    {projects.map((project) => (
+                      <SelectOption key={project.name} value={project.name}>
+                        {project.name}
+                      </SelectOption>
+                    ))}
                   </Select>
                 </div>
                 <div className="space-y-2">
